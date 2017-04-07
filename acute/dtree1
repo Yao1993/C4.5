@@ -1,0 +1,18 @@
+// Decision Tree
+digraph {
+	Urine1 [label=Urine]
+	Micturition2 [label=Micturition]
+	yes3 [label=yes]
+		Micturition2 -> yes3 [label=yes]
+	Occurrence4 [label=Occurrence]
+	Lumbar5 [label=Lumbar]
+	no6 [label=no]
+		Lumbar5 -> no6 [label=yes]
+	yes7 [label=yes]
+		Lumbar5 -> yes7 [label=no]
+		Occurrence4 -> Lumbar5 [label=no]
+		Micturition2 -> Occurrence4 [label=no]
+		Urine1 -> Micturition2 [label=yes]
+	no8 [label=no]
+		Urine1 -> no8 [label=no]
+}

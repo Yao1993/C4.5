@@ -1,0 +1,18 @@
+// Decision Tree
+digraph {
+	Occurrence1 [label=Occurrence]
+	"Burning 2" [label="Burning "]
+	no3 [label=no]
+		"Burning 2" -> no3 [label=no]
+	Urine4 [label=Urine]
+	Lumbar5 [label=Lumbar]
+	no6 [label=no]
+		Lumbar5 -> no6 [label=no]
+	yes7 [label=yes]
+		Lumbar5 -> yes7 [label=yes]
+		Urine4 -> Lumbar5 [label=yes]
+		"Burning 2" -> Urine4 [label=yes]
+		Occurrence1 -> "Burning 2" [label=no]
+	yes8 [label=yes]
+		Occurrence1 -> yes8 [label=yes]
+}
