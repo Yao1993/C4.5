@@ -276,7 +276,7 @@ class C45(object):
 
 if __name__ == '__main__':
     train_data = pd.read_csv('golf_c.csv')
-    C45_solver = C45(train_data, target='play', continuous=['humidity'])
+    C45_solver = C45(train_data, target='play', continuous=['humidity', 'temperature'])
     C45_solver.run()
     C45_solver.render_decision_tree('./dtree')
     test_data = train_data
